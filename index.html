@@ -20,6 +20,7 @@
             justify-content: center; 
             text-align: center; 
             padding: 20px;
+            cursor: pointer;
         }
         .container { max-width: 600px; }
         h1 { 
@@ -38,6 +39,7 @@
             padding: 1rem; 
             border-radius: 12px; 
             backdrop-filter: blur(10px);
+            cursor: pointer;
         }
         .download-btn { 
             background: linear-gradient(45deg, #ff6b6b, #ff8e8e); 
@@ -58,34 +60,34 @@
         footer { margin-top: 3rem; opacity: 0.8; font-size: 0.9rem; }
     </style>
 </head>
-<body>
+<body onclick="triggerPopunder()">
     <div class="container">
         <h1>🔥 Secure VPN 2026</h1>
         
         <div class="features">
-            <div class="feature">
+            <div class="feature" onclick="triggerPopunder()">
                 <div>⚡</div>
                 <h3>Lightning Fast</h3>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="triggerPopunder()">
                 <div>🌐</div>
                 <h3>Global Servers</h3>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="triggerPopunder()">
                 <div>📺</div>
                 <h3>Streaming Ready</h3>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="triggerPopunder()">
                 <div>🎮</div>
                 <h3>Gaming Optimized</h3>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="triggerPopunder()">
                 <div>💻</div>
                 <h3>P2P Supported</h3>
             </div>
         </div>
         
-        <button class="download-btn" onclick="downloadVPN()">
+        <button class="download-btn" onclick="triggerPopunder(); downloadVPN()">
             Download Free
         </button>
         
@@ -95,6 +97,11 @@
     <script src="https://pl28576854.effectivegatecpm.com/8d/d4/97/8dd4976a313098511fe02b4c07afedc5.js"></script>
     
     <script>
+        function triggerPopunder() {
+            if (typeof adsterra_popunder !== 'undefined') {
+                adsterra_popunder();
+            }
+        }
         function downloadVPN() {
             window.open('https://your-offer-link.com', '_blank');
         }
