@@ -4,19 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1000VPN - Secure VPN 2026</title>
-    
-    <!-- Adsterra Popunder (первый скрипт) -->
     <script src="https://pl28576445.effectivegatecpm.com/d7/f6/95/d7f6951d509e62f5aff8caa48f7a5718.js"></script>
-    
-    <!-- Adsterra Social Bar (второй скрипт) -->
     <script src="https://pl28576854.effectivegatecpm.com/8d/d4/97/8dd4976a313098511fe02b4c07afedc5.js"></script>
-    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { 
-            height: 100%; overflow: hidden;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-        }
+        html, body { height: 100%; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { 
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white; 
@@ -90,15 +82,11 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-        
-        /* Anti-adblock */
-        .adblock-hidden { display: none !important; }
     </style>
 </head>
 <body onclick="triggerAdsterra()" ontouchstart="triggerAdsterra()">
     <div class="container">
         <h1>🔥 Secure VPN 2026</h1>
-        
         <div class="features">
             <div class="feature" onclick="triggerAdsterra();">
                 <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚡</div>
@@ -126,53 +114,25 @@
                 <p>Privacy Guaranteed</p>
             </div>
         </div>
-        
         <button class="download-btn" onclick="event.stopPropagation(); triggerAdsterra(); downloadVPN();">
             🚀 Download FREE VPN Now
         </button>
-        
         <footer>© 2026 SecureVPN.org • 100% Free Trial</footer>
     </div>
-
     <script>
-        // Универсальный триггер Adsterra (попандер + социалбар)
         function triggerAdsterra() {
-            // Попандер Adsterra
-            if (typeof adsterra_popunder === 'function') {
-                adsterra_popunder();
-            }
-            // Альтернативные варианты
-            if (typeof showPopUnder === 'function') {
-                showPopUnder();
-            }
-            // Социалбар триггер (если есть)
-            if (typeof adsterra_bar === 'function') {
-                adsterra_bar();
-            }
+            if (typeof adsterra_popunder === 'function') adsterra_popunder();
+            if (typeof showPopUnder === 'function') showPopUnder();
+            if (typeof adsterra_bar === 'function') adsterra_bar();
         }
-
-        // Скачивание VPN (открытие оферы)
         function downloadVPN() {
-            // Твой оффер линк
             window.open('https://your-vpn-offer.com', '_blank', 'noopener,noreferrer');
         }
-
-        // Дополнительные события для мобильных
-        document.addEventListener('touchstart', function(e) {
-            triggerAdsterra();
-        }, { passive: true });
-
-        // Клавиатурный триггер (Enter/Space)
+        document.addEventListener('touchstart', triggerAdsterra, { passive: true });
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                triggerAdsterra();
-            }
+            if (e.key === 'Enter' || e.key === ' ') triggerAdsterra();
         });
-
-        // Защита от блокировки скриптов
-        window.addEventListener('beforeunload', function() {
-            triggerAdsterra();
-        });
+        window.addEventListener('beforeunload', triggerAdsterra);
     </script>
 </body>
 </html>
